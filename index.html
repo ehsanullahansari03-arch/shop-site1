@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>فروشگاه اینترنتی</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #f2f2f2;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: white;
+      width: 220px;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px gray;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    button {
+      background: green;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🛒 فروشگاه اینترنتی من</h1>
+
+<div class="container">
+
+  <div class="card">
+    <img src="https://picsum.photos/250/150?random=1">
+    <h3>1جیبی</h3>
+    <p>قیمت: 50 افغانی</p>
+    <button onclick="buy('کفش اسپرت', 500)">خرید</button>
+  </div>
+
+  <div class="card">
+    <img src="https://picsum.photos/250/150?random=2">
+    <h3>2جیبی</h3>
+    <p>قیمت: 70 افغانی</p>
+    <button onclick="buy('کفش رسمی', 800)">خرید</button>
+  </div>
+
+</div>
+
+<script>
+function buy(name, price) {
+  let phone = "93702667499";
+  let message = "سلام، میخواهم " + name + " به قیمت " + price + " افغانی را بخرم";
+
+  let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
